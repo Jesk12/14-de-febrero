@@ -113,10 +113,10 @@ h1 {
 }
 
 .envelope > .letter > .text {
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-family:'Courier New', Courier, monospace ;
     color: var(--txt-color);
     text-align: left;
-    font-size: 17px;
+    font-size: 16px;
     border: 3px dotted var(--txt-color);
     padding: 10px;
     height: 100%;
