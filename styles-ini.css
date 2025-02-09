@@ -9,8 +9,8 @@ body {
 
 
 .love {
-    width: 350px; /* 10 veces más grande */
-    height: 350px; /* 10 veces más grande */
+    width: 350px;
+    height: 350px;
     transform: rotate(45deg);
     background: red;
     position: relative;
@@ -43,8 +43,8 @@ form {
 .love:before,
 .love:after {
     content: "";
-    height: 350px; /* 10 veces más grande */
-    width: 350px; /* 10 veces más grande */
+    height: 350px;
+    width: 350px;
     border-radius: 50%;
     background: red;
     position: absolute;
@@ -52,11 +52,11 @@ form {
 
 .love:before {
     top: 0;
-    left: -175px; /* Ajustado para mantener la forma */
+    left: -175px;
 }
 
 .love:after {
-    top: -175px; /* Ajustado para mantener la forma */
+    top: -175px;
 }
 
 
