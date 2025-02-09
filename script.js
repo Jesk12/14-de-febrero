@@ -38,18 +38,18 @@ function createFallingHeart() {
     const heart = document.createElement("div");
     heart.className = "falling-heart";
     
-    // Posiciona el corazón horizontalmente de forma aleatoria (se resta el ancho del corazón)
+
     heart.style.left = Math.random() * (window.innerWidth - 100) + "px";
     
-    // Se agrega el corazón al contenedor fijo
+
     document.getElementById("hearts-container").appendChild(heart);
     
-    // Elimina el corazón tras 4 segundos (duración de la animación)
+
     setTimeout(() => {
       heart.remove();
     }, 4000);
   }
   
-  // Crea un corazón cada 500 milisegundos
+
   setInterval(createFallingHeart, 500);
   
