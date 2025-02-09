@@ -23,3 +23,24 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
         errorMessage.textContent = "Datos incorrectos. Inténtalo de nuevo.";
     }
 });
+
+
+function createHeart() {
+  const heart = document.createElement('div');
+  heart.classList.add('heart');
+  heart.innerHTML = '❤️';
+  
+  // Posicionar el corazón aleatoriamente en el ancho de la página
+  heart.style.left = Math.random() * window.innerWidth + 'px';
+  
+  // Añadirlo al body
+  document.body.appendChild(heart);
+
+  // Eliminar el corazón después de que haya caído
+  setTimeout(() => {
+    heart.remove();
+  }, 3000);
+}
+
+// Crear un corazón cada 0.5 segundos
+setInterval(createHeart, 200);
