@@ -10,19 +10,29 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     let fullName = document.getElementById("fullName").value;
     let errorMessage = document.getElementById("error-message");
 
+    // Normaliza las entradas de usuario y las convierte a minúsculas sin tildes
+    function normalizarTexto(texto) {
+        return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    }
+
     // Verifica que ningún campo esté vacío
     if (!username || !password || !fullName) {
         errorMessage.textContent = "Por favor, completa todos los campos.";
         return;
     }
 
-    // Validar credenciales
-    if (username === usuarioCorrecto && password === contrasenaCorrecta && fullName === nombreCompletoCorrecto) {
+    // Normaliza las credenciales ingresadas y las comparaciones
+    if (
+        normalizarTexto(username) === normalizarTexto(usuarioCorrecto) &&
+        normalizarTexto(password) === normalizarTexto(contrasenaCorrecta) &&
+        normalizarTexto(fullName) === normalizarTexto(nombreCompletoCorrecto)
+    ) {
         window.location.href = "carta.html";
     } else {
         errorMessage.textContent = "Datos incorrectos. Inténtalo de nuevo.";
     }
 });
+
 
 
 function createHeart() {
