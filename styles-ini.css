@@ -80,3 +80,23 @@ button {
     color: red;
     font-size: 14px;
 }
+
+.heart {
+    position: absolute;
+    top: -50px;
+    font-size: 24px;
+    color: red;
+    animation: fall 3s infinite;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes fall {
+    0% {
+      top: -50px;
+      opacity: 1;
+    }
+    100% {
+      top: 100vh;
+      opacity: 0;
+    }
+  }
